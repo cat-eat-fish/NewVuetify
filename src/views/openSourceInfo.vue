@@ -4,7 +4,8 @@
             <v-layout row wrap>
                 <v-flex xs12>
                     <v-card dark color="secondary">
-                        <v-breadcrumbs :items="breadcrumbs" divider=">"></v-breadcrumbs>
+                        <span style="padding:18px 12px;font-size:14px" @click="$router.back()">返回</span>
+                        <v-breadcrumbs :items="breadcrumbs" divider=">"  style="display: inline-block;"></v-breadcrumbs>
                     </v-card>
                 </v-flex>
                 <v-flex xs12>
@@ -77,13 +78,13 @@ export default {
             snackbar:false,
             snackbarText:"",
             breadcrumbs: [      //面包屑
-                {text: '首页',disabled: false,href: ''},
+                {text: '首页',disabled: false,href: '/'},
                 {text: '开源信息',disabled: true,href: ''},
                 {text: '开源接口',disabled: true,href: ''}
             ],
             alert:true,         //提示框
             items: [
-                {action: 'local_activity',active:true,title: '新实时段子',items: [{ title: 'https://api.apiopen.top/getJoke?page=1&count=2&type=video' ,type:"post"}]},
+                {action: 'local_activity',active:false,title: '新实时段子',items: [{ title: 'https://api.apiopen.top/getJoke?page=1&count=2&type=video' ,type:"post"}]},
                 {action: 'restaurant',title: '快递查询',items: [{ title: 'https://api.apiopen.top/EmailSearch?number=1012002',type:"post"}]},
                 {action: 'school',title: '视频推荐',items: [{ title: 'https://api.apiopen.top/todayVideo', type:"post"}]},
                 {action: 'directions_run',title: '小说推荐',items: [{ title: 'https://www.apiopen.top/novelApi',type:"get" }]},

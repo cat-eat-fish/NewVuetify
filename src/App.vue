@@ -152,8 +152,8 @@ export default {
       drawer: null,
       items: [
         { icon: 'contacts', text: '首页' ,href:'/'},
-        { icon: 'history', text: '时间' },
-        { icon: 'content_copy', text: '笔记' },
+        { icon: 'history', text: '测试',href:'text' },
+        { icon: 'content_copy', text: '笔记',href:"note" },
         {
           icon: 'keyboard_arrow_up',
           'icon-alt': 'keyboard_arrow_down',
@@ -170,7 +170,8 @@ export default {
           model: false,
           children: [
             { text: '开源接口',href:'/openSourceInfo' },
-            { text: '案例' ,href:'/openSourceCase'},
+            { text: '推荐小说案例' ,href:'/openSourceCase'},
+            { text: '推荐其他案例' ,href:'/openSourceCaseOther'},
             { text: 'app案例' },
           ]
         },
