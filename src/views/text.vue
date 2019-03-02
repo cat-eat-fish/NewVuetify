@@ -7,7 +7,7 @@
                 close
             </v-btn>
         </v-snackbar> 
-        <v-container grid-list-md >
+        <v-container grid-list-md fluid>
             <v-flex xs12>
                 <v-alert :value="true"   transition="scale-transition" type="warning">该页面只进行测试.</v-alert>
             </v-flex>
@@ -18,7 +18,22 @@
                 :search-input.sync="search"
                 class="mx-3"
                 ></v-autocomplete>
+            <v-layout>
+                <v-flex xs2>
+                    <v-date-picker  v-model="picker" :first-day-of-week="0" locale="zh-cn"></v-date-picker>
+                    <v-time-picker  v-model="time"  type="month"  width="290" class="xs-3"></v-time-picker>
+                </v-flex>
+            </v-layout>
+                
         </v-container>
+        <div class="text-xs-center">
+            <v-layout wrap row >
+                <v-flex xs5 > 
+                    <v-progress-linear :indeterminate="true" ></v-progress-linear>
+                </v-flex>
+            </v-layout>
+            
+        </div>
     </div>
 </template>
 <script>
@@ -33,7 +48,10 @@ export default {
             items: [],
             search: null,
             select: null,
-            states: []
+            states: [],
+
+            picker: new Date().toISOString().substr(0, 10),
+            time: '11:15'
         }
     },
     watch: {

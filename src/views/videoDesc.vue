@@ -28,6 +28,7 @@
                         <span class="view">观看次数：<span class="blue">{{videoInfo.collectionCount}}</span></span>
                         <!-- <span class="copyright">本视频来源于：开源社区，转载请联系视频作者：{{videoInfo.name}}</span> -->
                     </div>
+                    <v-rating v-model="rating"></v-rating>
                 </div>
                 <div class="video-view">
                     <video-player v-if="isok"  
@@ -57,6 +58,7 @@ export default {
     name:"videodesc",
     data(){
         return{
+            rating: 3,
             breadcrumbs: [
                 {text: '首页',disabled: false,href: '/'},
                 {text: '视频列表',disabled: false,href: '/openSourceCaseOther'},

@@ -1,9 +1,9 @@
 <template>
     <div class="openSourceCase">
-        <v-container grid-list-md >
+        <v-container grid-list-md  >
             <v-layout  v-if="!isVideo" row wrap>
                 <v-flex xs12>
-                    <v-btn fab @click="doGetName"  small  :loading="loading" :disabled="loading" color="secondary" >
+                    <v-btn fab  @click="doGetName"  small  :loading="loading" :disabled="loading" color="secondary" >
                         <v-icon dark>cached</v-icon>
                     </v-btn>
                     <div v-for="(item,index) in name" :key="index">
@@ -13,7 +13,7 @@
             </v-layout>
             <v-layout>
                 <v-flex xs12>
-                    <v-card dark color="secondary">
+                    <v-card  dark color="secondary">
                         <span style="padding:18px 12px;font-size:14px" @click="$router.back()">返回</span>
                         <v-breadcrumbs :items="breadcrumbs" divider=">"  style="display: inline-block;"></v-breadcrumbs>
                     </v-card>
@@ -112,7 +112,6 @@ export default {
                     data.map((item,index)=>{
                         item.data.content.data.releaseTime = formateDate(new Date(item.data.content.data.releaseTime),"Y-M-D h:min:s")
                     })
-                    console.log(data)
                     this.video = data;
                 }
             }).catch(err=>{console.log(err)})

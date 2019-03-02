@@ -10,8 +10,8 @@ export default new Router({
     {path: '/about',name: 'about',component: () => import('./views/About.vue'),meta:{keepAlive:true}},
 
     {path: '/openSourceInfo',name: 'openSourceInfo',component: () => import('./views/openSourceInfo.vue'),meta:{keepAlive:true}},
-    {path: '/openSourceCase',name: 'openSourceCase',component: () => import('./views/openSourceCase.vue'),meta:{keepAlive:false}},
-    {path: '/openSourceCaseOther',name: 'openSourceCaseOther',component: () => import('./views/openSourceCaseOther.vue'),meta:{keepAlive:false}},
+    {path: '/openSourceCase',name: 'openSourceCase',component: () => import('./views/openSourceCase.vue'),meta:{keepAlive:true}},
+    {path: '/openSourceCaseOther',name: 'openSourceCaseOther',component: () => import('./views/openSourceCaseOther.vue'),meta:{keepAlive:true}},
     {path: '/videodesc',name: 'videodesc',component: () => import('./views/videoDesc.vue'),meta:{keepAlive:false}},
     
     

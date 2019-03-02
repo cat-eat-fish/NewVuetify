@@ -1,6 +1,6 @@
 module.exports = {
     //根路径
-    publicPath: "/",
+    publicPath: "./",
 
     // 构建输出目录
     outputDir: "dist",
@@ -16,7 +16,7 @@ module.exports = {
         https: false,
         hotOnly: false,
         proxy:{
-            //城市api
+            //
             '/sqapi': {
                 target: "http://t.shuqi.com/route.php?pagename=#!/",
                 ws: true,
